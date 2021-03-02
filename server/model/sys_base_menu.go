@@ -1,11 +1,11 @@
 package model
 
 import (
-	"gorm.io/gorm"
+	"gin-vue-admin/global"
 )
 
 type SysBaseMenu struct {
-	gorm.Model
+	global.GVA_MODEL
 	MenuLevel     uint   `json:"-"`
 	ParentId      string `json:"parentId" gorm:"comment:父菜单ID"`
 	Path          string `json:"path" gorm:"comment:路由path"`
@@ -24,12 +24,13 @@ type Meta struct {
 	DefaultMenu bool   `json:"defaultMenu" gorm:"comment:是否是基础路由（开发中）"`
 	Title       string `json:"title" gorm:"comment:菜单名"`
 	Icon        string `json:"icon" gorm:"comment:菜单图标"`
+	CloseTab    bool   `json:"closeTab" gorm:"comment:自动关闭tab"`
 }
 
 type SysBaseMenuParameter struct {
-	gorm.Model
+	global.GVA_MODEL
 	SysBaseMenuID uint
-	Type          string `json:"type" gorm:"commit:'地址栏携带参数为params还是query'"`
-	Key           string `json:"key" gorm:"commit:'地址栏携带参数的key'"`
-	Value         string `json:"value" gorm:"commit:'地址栏携带参数的值'"`
+	Type          string `json:"type" gorm:"comment:地址栏携带参数为params还是query"`
+	Key           string `json:"key" gorm:"comment:地址栏携带参数的key"`
+	Value         string `json:"value" gorm:"comment:地址栏携带参数的值"`
 }

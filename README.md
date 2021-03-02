@@ -12,8 +12,16 @@
 
 [English](./README-en.md) | 简体中文
 
+[gitee地址:https://gitee.com/pixelmax/gin-vue-admin](https://gitee.com/pixelmax/gin-vue-admin)
+
+[github地址:https://github.com/flipped-aurora/gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin)
+
+[vue3版本分支地址:https://github.com/flipped-aurora/gin-vue-admin/tree/vue3Develop](https://github.com/flipped-aurora/gin-vue-admin/tree/vue3Develop)
+
 # 项目文档
 [在线文档](https://www.gin-vue-admin.com/) : https://www.gin-vue-admin.com/
+
+[从环境到部署教学视频](https://www.bilibili.com/video/BV1fV411y7dT)
 
 [开发教学](https://www.gin-vue-admin.com/docs/help) (贡献者:  <a href="https://github.com/LLemonGreen">LLemonGreen</a> And <a href="https://github.com/fkk0509">Fann</a>)
 - 前端UI框架：[element-ui](https://github.com/ElemeFE/element) 
@@ -65,9 +73,9 @@ Gin-vue-admin 的成长离不开大家的支持，如果你愿意为 gin-vue-adm
 
 ```
 - node版本 > v8.6.0
-- golang版本 >= v1.11
+- golang版本 >= v1.14
 - IDE推荐：Goland
-- gormv2版本初始化数据库可以利用批量创建功能，这里已经写好初始化代码，需要在main.go内打开 initialize.Data() 的注释即可
+- 初始化项目： 不同版本数据库初始化不通 参见https://www.gin-vue-admin.com/docs/server#1-%E5%88%9D%E5%A7%8B%E5%8C%96server%E9%A1%B9%E7%9B%AE
 - 替换掉项目中的七牛云公钥，私钥，仓名和默认url地址，以免发生测试文件数据错乱
 ```
 
@@ -154,6 +162,8 @@ npm run serve
 ```
 
 ### 2.2 server端
+
+使用 goland等编辑工具，打开server目录，不可以打开 gin-vue-admin跟目录
 
 ```bash
 # 使用 go.mod
@@ -315,7 +325,6 @@ swag init
 
 - [ ] 导入，导出Excel
 - [ ] Echart图表支持
-- [ ] 工作流，任务交接功能开发
 - [ ] 单独前端使用模式以及数据模拟
 
 ## 7. 知识库 
